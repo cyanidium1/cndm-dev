@@ -1,37 +1,32 @@
-import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-
-import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
-
-import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
-
-import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-
-import hmsPreview from 'assets/hms-preview.png';
-import cicd from 'assets/cicd.png';
-import algoVE from 'assets/algo-ve-preview.png';
-import blockchain from 'assets/blockchain.png';
-import algoVE2 from 'assets/algoVE2.png';
-import stockDash from 'assets/stock-dashboard.png';
-import stockDash2 from 'assets/stockDash2.png';
+"use client";
+import React, { useEffect, useRef, useState } from 'react';
+import styles from './Home.module.css';
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
 import { Profile } from 'layouts/Home/Profile';
 import { ProjectSummary } from 'layouts/Home/ProjectSummary';
-import { useEffect, useRef, useState } from 'react';
-import styles from './Home.module.css';
 
-const disciplines = ['Student', 'Learner'];
+import gamestackTexture2Placeholder from 'assets/gamestack-list.jpg';
+import gamestackTexturePlaceholder from 'assets/gamestack-login.jpg';
+import sliceTexturePlaceholder from 'assets/gamestack-list.jpg';
+import sprTexturePlaceholder from 'assets/gamestack-login.jpg';
+import hmsPreview from 'assets/spr-lesson-builder-dark-large.jpg';
+import cicd from 'assets/slice-app.jpg';
+import stockDash from 'assets/gamestack-login.jpg';
+import stockDash2 from 'assets/gamestack-list.jpg';
+
+const disciplines = ['Web Dev', 'Web Design', 'App Dev.'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
-  const intro = useRef();
-  const projectOne = useRef();
-  const projectTwo = useRef();
-  const projectThree = useRef();
-  const projectFour = useRef();
-  const details = useRef();
+  const intro = useRef(null);
+  const projectOne = useRef(null);
+  const projectTwo = useRef(null);
+  const projectThree = useRef(null);
+  const projectFour = useRef(null);
+  const details = useRef(null);
 
   useEffect(() => {
     const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
@@ -58,10 +53,14 @@ export const Home = () => {
     );
 
     sections.forEach(section => {
-      sectionObserver.observe(section.current);
+      if (section.current) {
+        sectionObserver.observe(section.current);
+      }
     });
 
-    indicatorObserver.observe(intro.current);
+    if (intro.current) {
+      indicatorObserver.observe(intro.current);
+    }
 
     return () => {
       sectionObserver.disconnect();
@@ -73,7 +72,7 @@ export const Home = () => {
     <div className={styles.home}>
       <Meta
         title="Designer + Developer"
-        description="Design portfolio of Mayank Jain — a product designer working on web & mobile
+        description="Design portfolio of CNDM Dev — a product designer working on web & mobile
           apps with a focus on motion, experience design, and accessibility."
       />
       <Intro
@@ -87,10 +86,10 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Hostel Management System"
-        description="A platform for students to address all their hostel issues with their hostel warden"
-        buttonText="View project"
-        buttonLink="https://github.com/mayankjain25/Hostel-Management-System"
+        title="Создаю сайты которые приносят деньги"
+        description="Помогу вывести любой бизнес на новый уровень с использованием самых современных технологий и user-friendly дизайна."
+        buttonText="Посмотреть мой проект для крупного агентсва недвижимости"
+        buttonLink="https://www.bstrust369.com/"
         model={{
           type: 'laptop',
           alt: 'Displaying the home page of the website.',
@@ -104,21 +103,25 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-2"
-        // alternate
+        alternate
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Blockchain Based FIR Registration System"
-        description="A blockchain based FIR registration system to ensure transparency and security of the data to facilitate and safeguard the interests of the victim."
-        buttonText="Visit repository"
-        buttonLink="https://github.com/mayankjain25/Blockchain-Based-FIR-System"
+        title="Сайты которые одинаково хорошо смотрятся на любых экранах и устройствах"
+        description="Обратившись ко мне вы можете не переживать что потеряете клиента из-за того что сайт не будет работать на каком-то устройстве."
+        buttonText="Посмотреть сайт"
+        buttonLink="https://www.graph3d.pro/"
         model={{
-          type: 'laptop',
-          alt: 'landing page',
+          type: 'phone',
+          alt: 'App login screen',
           textures: [
             {
-              srcSet: [blockchain],
+              srcSet: [stockDash],
               placeholder: gamestackTexturePlaceholder,
+            },
+            {
+              srcSet: [stockDash2],
+              placeholder: gamestackTexture2Placeholder,
             },
           ],
         }}
@@ -128,10 +131,10 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="CI/CD Pipeline using Jenkins and Docker"
-        description="his is a basic starter website that was built incorporating a CI/CD Pipeline involving GitHub Webhooks and Jenkins. Every push is deployed via an nginx docker container"
-        buttonText="View project"
-        buttonLink="https://github.com/mayankjain25/Microo-Starter-Website"
+        title="От простого лендинга до сложных интернет магазинов"
+        description="Берусь за любую сложность проекта. Хотите одностраничник-визитку с красивым дизайном, анимацией и мультиязычностью - пожалуйста! Хотите маркетплейс с базой данных товаров, админ-панелью и автоматическими продажами? Не вопрос :)"
+        buttonText="Проект ресторана домашней кухни"
+        buttonLink="/projects/slice"
         model={{
           type: 'laptop',
           alt: 'Visual description of the pipeline workflow',
@@ -143,7 +146,7 @@ export const Home = () => {
           ],
         }}
       />
-      <ProjectSummary
+      {/* <ProjectSummary
         id="project-4"
         alternate
         sectionRef={projectFour}
@@ -167,7 +170,7 @@ export const Home = () => {
             },
           ],
         }}
-      />
+      /> */}
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}

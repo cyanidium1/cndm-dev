@@ -5,7 +5,7 @@ addons.setConfig({
   theme: {
     ...themes.dark,
     // brandImage: 'https://hamishw.com/icon.svg',
-    brandTitle: 'Mayank Jain Components',
-    brandUrl: 'https://mayankjain.cf',
+    brandTitle: 'CNDM Dev Components',
+    brandUrl: 'https://CNDM-Dev.cf',
   },
 });
