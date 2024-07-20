@@ -73,14 +73,14 @@ import styles from './SmartSparrow.module.css';
 const Earth = dynamic(() => import('./Earth').then(mod => mod.Earth));
 const EarthSection = dynamic(() => import('./Earth').then(mod => mod.EarthSection));
 
-const title = 'Designing the future of education';
+const title = 'Добро пожаловать на Graph3D';
 const description =
-  'I worked as the design lead on a major iteration of Smart Sparrow’s product. We took the platform in a bold new direction, focusing on becoming the best tool for learning designers.';
+  'Graph3D — это сайт-портфолио 3D-визуализатора, специализирующегося на дизайне интерьеров. Здесь представлены работы и услуги автора, демонстрирующие его мастерство и творческий подход.';
 const roles = [
-  'Art Direction',
-  'UX and UI Design',
-  'Front End Development',
-  'Motion Design',
+  '3D Визуализация',
+  'Дизайн интерьера',
+  'Создание портфолио',
+  'Консультации',
 ];
 
 export const SmartSparrow = () => {
@@ -97,7 +97,7 @@ export const SmartSparrow = () => {
   return (
     <Fragment>
       <ProjectContainer className="spr">
-        <Meta title={title} prefix="Projects" description={description} />
+        <Meta title={title} prefix="Проекты" description={description} />
         <ProjectBackground
           opacity={isDark ? 0.5 : 0.8}
           src={backgroundSpr}
@@ -107,7 +107,7 @@ export const SmartSparrow = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://www.smartsparrow.com/"
+          url="https://www.graph3d.pro/"
           roles={roles}
         />
         <ProjectSection padding="top">
@@ -126,21 +126,15 @@ export const SmartSparrow = () => {
                   : main
               }
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
-              alt="The aero lesson builder app dragging an audio component into a screen about plant cells."
+              alt="Основной экран Graph3D с 3D-визуализацией."
             />
           </ProjectSectionContent>
         </ProjectSection>
         <ProjectSection>
           <ProjectTextRow>
-            <ProjectSectionHeading>The problem</ProjectSectionHeading>
+            <ProjectSectionHeading>О Graph3D</ProjectSectionHeading>
             <ProjectSectionText>
-              In 2017, Smart Sparrow began a project to build an entirely new platform to
-              from the ground up to serve as the most powerful tool for educators to
-              create online learning experiences. The old platform was built in Flash, and
-              there were a number of user experience problems to solve in the process of
-              moving the platform to Javascript. The primary goals for the project were
-              reducing barriers to collaboration, and making the platform both easier for
-              new users, but with plenty of room to scale for advanced users.
+              Graph3D — это сайт-портфолио 3D-визуализатора, который создает высококачественные дизайны интерьеров. Здесь вы можете увидеть его работы и услуги, которые он предлагает, включая создание 3D-визуализаций, дизайн интерьеров и консультации.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
@@ -158,7 +152,7 @@ export const SmartSparrow = () => {
                   ? imageSprComponentsDarkPlaceholder
                   : imageSprComponentsLightPlaceholder
               }
-              alt={`A set of ${themeId} themed components for the aero design system`}
+              alt={`Набор компонентов в ${themeId} теме для дизайна Graph3D`}
               sizes="100vw"
             />
             <ProjectTextRow>
@@ -166,18 +160,14 @@ export const SmartSparrow = () => {
                 currentIndex={themes.indexOf(themeId)}
                 onChange={handleThemeChange}
               >
-                <SegmentedControlOption>Dark theme</SegmentedControlOption>
-                <SegmentedControlOption>Light theme</SegmentedControlOption>
+                <SegmentedControlOption>Темная тема</SegmentedControlOption>
+                <SegmentedControlOption>Светлая тема</SegmentedControlOption>
               </SegmentedControl>
             </ProjectTextRow>
             <ProjectTextRow>
-              <ProjectSectionHeading>The aero design system</ProjectSectionHeading>
+              <ProjectSectionHeading>Наш дизайн-система</ProjectSectionHeading>
               <ProjectSectionText>
-                To streamline the design process across designers and engineers for such a
-                large project, it was important to lay the foundations with a strong,
-                flexible design system that could evolve during the product’s development
-                cycle. This would inform both the aesthetics and user experience across
-                the product itself as well as the website and marketing material.
+                Для обеспечения согласованности и эффективности в наших проектах мы разработали комплексную дизайн-систему. Эта система упрощает сотрудничество между нашими дизайнерами и разработчиками, обеспечивая целостный пользовательский опыт.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -197,16 +187,13 @@ export const SmartSparrow = () => {
                   ? imageSprDesignSystemDarkPlaceholder
                   : imageSprDesignSystemLightPlaceholder
               }
-              alt="The homepage of the aero design system docs website linking to principles and components."
+              alt="Главная страница документации дизайн-системы Graph3D."
               sizes="100vw"
             />
             <ProjectTextRow>
-              <ProjectSectionHeading>Design system docs</ProjectSectionHeading>
+              <ProjectSectionHeading>Документация дизайн-системы</ProjectSectionHeading>
               <ProjectSectionText>
-                A design system is useless if no one knows how to use it, so we put
-                together a comprehensive documentation website to cover principles, ux,
-                accessibility, and component guidelines for designers and engineers
-                working with the system.
+                Документация нашей дизайн-системы предоставляет подробные руководства по принципам, UX, доступности и использованию компонентов. Этот ресурс необходим нашей команде для поддержания высокого уровня дизайна и разработки.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -218,7 +205,7 @@ export const SmartSparrow = () => {
               <Image
                 srcSet={[imageSprBackgroundVolcanism, imageSprBackgroundVolcanismLarge]}
                 placeholder={imageSprBackgroundVolcanismPlaceholder}
-                alt="A dramatic ocean scene with lava forming a new land mass."
+                alt="Драматическая океаническая сцена с лавой, образующей новую землю."
                 sizes="100vw"
               />
             }
@@ -226,12 +213,9 @@ export const SmartSparrow = () => {
             <ProjectSectionColumns width="full">
               <ProjectSectionContent width="full">
                 <ProjectTextRow width="s">
-                  <ProjectSectionHeading>Motion design</ProjectSectionHeading>
+                  <ProjectSectionHeading>Анимация</ProjectSectionHeading>
                   <ProjectSectionText>
-                    Animation was a core principle in making the authoring experience a
-                    more understandable process. Elements animate in ways that indicate
-                    the cause and effect of each interaction to improve the fluidity of
-                    the overall experience.
+                    Анимация играет ключевую роль в создании интуитивного и привлекательного пользовательского интерфейса на нашем сайте. Для творческого портфолио важно иметь впечатляющие анимации, подчеркивающие изысканность услуг и демонстрирующие высокий уровень мастерства.
                   </ProjectSectionText>
                 </ProjectTextRow>
               </ProjectSectionContent>
@@ -243,7 +227,7 @@ export const SmartSparrow = () => {
                   { src: videoSprMotion, width: 2560 },
                 ]}
                 placeholder={videoSprMotionPlaceholder}
-                alt="A learning designer building and deploying an interactive lesson on volcanism using the app."
+                alt="Пользователь взаимодействует с платформой Graph3D для визуализации данных."
                 sizes={`(max-width: ${media.mobile}px) 100vw, 50vw`}
               />
             </ProjectSectionColumns>
@@ -252,13 +236,9 @@ export const SmartSparrow = () => {
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Encouraging adaptivity</ProjectSectionHeading>
+              <ProjectSectionHeading>Инструменты для сотрудничества</ProjectSectionHeading>
               <ProjectSectionText>
-                A major part of solving for collaboration was being able to visualize the
-                learner experience in the editor. This was especially beneficial for
-                subject matter experts and instructors need to review and give feedback on
-                the higher level structure without having to dig through all of the
-                adaptivity scenarios screen by screen.
+                Наша платформа способствует сотрудничеству, предоставляя инструменты, позволяющие пользователям совместно визуализировать и анализировать данные. Эта функция особенно полезна для команд, позволяя работать более эффективно и принимать обоснованные решения.
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
@@ -274,7 +254,7 @@ export const SmartSparrow = () => {
                   ? adminPanel
                   : adminPanel
               }
-              alt="A drag and drop storyboard style editor for creating an adaptive lesson."
+              alt="Инструменты для сотрудничества на платформе Graph3D."
               sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -284,14 +264,10 @@ export const SmartSparrow = () => {
             <ProjectSectionContent>
               <ProjectTextRow>
                 <ProjectSectionHeading>
-                  An extensible plugin ecosystem usable by everyone
+                  Настраиваемые плагины
                 </ProjectSectionHeading>
                 <ProjectSectionText>
-                  The most powerful aspect of the platform is the ability to create custom
-                  plugins for any content, whether it be a degree, course, lesson, screen,
-                  or interactive component. Out of the box these can be made configurable
-                  with minimal effort from developers. Learning designers can then edit
-                  everything using a common configuration interface.
+                  Наша платформа поддерживает широкий спектр настраиваемых плагинов, позволяя пользователям расширять функциональность и адаптировать платформу под свои специфические нужды. Эта гибкость делает Graph3D универсальным инструментом для различных отраслей.
                 </ProjectSectionText>
               </ProjectTextRow>
             </ProjectSectionContent>
@@ -308,7 +284,7 @@ export const SmartSparrow = () => {
                     ? adminMobile
                     : adminMobile
                 }
-                alt="Configuration options for a component."
+                alt="Настройки плагина на мобильной версии."
                 sizes={`(max-width: ${media.mobile}px) 50vw, 25vw`}
               />
               <Image
@@ -323,206 +299,12 @@ export const SmartSparrow = () => {
                     ? siteMobile
                     : siteMobile
                 }
-                alt="Configuration options for text."
+                alt="Настройки текстовых компонентов."
                 sizes={`(max-width: ${media.mobile}px) 50vw, 25vw`}
               />
             </div>
           </ProjectSectionColumns>
         </ProjectSection>
-        {/* <ThemeProvider themeId="dark" data-invert>
-          <Earth
-            className={styles.earth}
-            hideMeshes={useMemo(
-              () => ['Atmosphere', 'EarthPartial', 'Chunk', 'EarthFull'],
-              []
-            )}
-            position={useMemo(() => [0, 0, 0], [])}
-            labels={useMemo(
-              () => [
-                {
-                  position: [0.54, 0.19, 0.18],
-                  text: 'Pacific ring of fire',
-                  hidden: true,
-                },
-                {
-                  position: [0.47, -0.38, 0.04],
-                  text: 'Ruapehu',
-                  hidden: true,
-                },
-                {
-                  position: [0.22, 0.44, -0.35],
-                  text: 'St. Helens',
-                  hidden: true,
-                },
-                {
-                  position: [0.16, -0.06, 0.58],
-                  text: 'Krakatoa',
-                  hidden: true,
-                },
-                {
-                  position: [0.11, 0.2, -0.56],
-                  text: 'Parícutin',
-                  hidden: true,
-                },
-                {
-                  position: [0.52, 0.2, -0.23],
-                  text: 'Kīlauea',
-                  hidden: true,
-                },
-                {
-                  position: [-0.24, 0.75, 0.24],
-                  text: 'Mantle',
-                  delay: 800,
-                  hidden: true,
-                },
-                {
-                  position: [-0.24, 0.55, 0.24],
-                  text: 'Outer core',
-                  delay: 800,
-                  hidden: true,
-                },
-                {
-                  position: [-0.24, 0.35, 0.24],
-                  text: 'Inner core',
-                  delay: 800,
-                  hidden: true,
-                },
-              ],
-              []
-            )}
-            scale={0.6}
-          >
-            <EarthSection
-              scrim
-              animations={['0:loop']}
-              camera={[0, 0, 1.5]}
-              meshes={['Atmosphere', 'EarthFull']}
-            >
-              <ProjectSection>
-                <ProjectSectionContent>
-                  <ProjectTextRow center>
-                    <ProjectSectionHeading>
-                      Next-generation learning experiences
-                    </ProjectSectionHeading>
-                    <ProjectSectionText>
-                      The flexibility of the product allowed for developers to create
-                      engaging interactive experiences as highly configurable plugins that
-                      could then be used and manipulated by learning designers.
-                    </ProjectSectionText>
-                  </ProjectTextRow>
-                </ProjectSectionContent>
-              </ProjectSection>
-            </EarthSection>
-            <EarthSection
-              animations={['0:loop']}
-              camera={[0, 0, 2.4]}
-              meshes={['Atmosphere', 'EarthFull']}
-            />
-            <EarthSection
-              animations={['0:loop']}
-              camera={[1.14, -1.39, 0.94]}
-              meshes={['Atmosphere', 'EarthFull']}
-            >
-              <ProjectSection>
-                <ProjectSectionContent width="xl">
-                  <ProjectTextRow justify="end" width="s">
-                    <ProjectSectionHeading level={4} as="h3">
-                      Bringing 3D into learning
-                    </ProjectSectionHeading>
-                    <ProjectSectionText>
-                      One really cool example is the 3D screen plugin. Learning designers
-                      can load any model into it and then configure camera positions to
-                      animate to for each section.
-                    </ProjectSectionText>
-                  </ProjectTextRow>
-                </ProjectSectionContent>
-              </ProjectSection>
-            </EarthSection>
-            <EarthSection
-              animations={['0:loop']}
-              camera={[1.17, 0.69, -1.47]}
-              meshes={['Atmosphere', 'EarthFull']}
-              labels={[
-                'Pacific ring of fire',
-                'Ruapehu',
-                'St. Helens',
-                'Krakatoa',
-                'Parícutin',
-                'Kīlauea',
-              ]}
-            >
-              <ProjectSection>
-                <ProjectSectionContent width="xl">
-                  <ProjectTextRow justify="start" width="s">
-                    <ProjectSectionHeading level={4} as="h3">
-                      Interactivity
-                    </ProjectSectionHeading>
-                    <ProjectSectionText>
-                      Learners can then be directed to specific parts of the model and
-                      shown labels. They’re also able to click and drag to orbit around
-                      and freely explore at any time.
-                    </ProjectSectionText>
-                  </ProjectTextRow>
-                </ProjectSectionContent>
-              </ProjectSection>
-            </EarthSection>
-            <EarthSection
-              animations={['0:loop']}
-              camera={[1.81, 0.51, 0.43]}
-              meshes={['Atmosphere', 'EarthFull']}
-              labels={[
-                'Pacific ring of fire',
-                'Ruapehu',
-                'St. Helens',
-                'Krakatoa',
-                'Parícutin',
-                'Kīlauea',
-              ]}
-            />
-            <EarthSection
-              animations={['0:loop']}
-              camera={[0.37, 1.02, 1.84]}
-              meshes={['EarthPartial', 'Chunk']}
-              labels={['Mantle', 'Outer core', 'Inner core']}
-            >
-              <ProjectSection>
-                <ProjectSectionContent width="xl">
-                  <ProjectTextRow justify="end" width="s">
-                    <ProjectSectionHeading level={4} as="h3">
-                      Animation
-                    </ProjectSectionHeading>
-                    <ProjectSectionText>
-                      Learning designers can pick an animation included in the model to
-                      play or loop for any section without having to use any complex
-                      animation tools.
-                    </ProjectSectionText>
-                  </ProjectTextRow>
-                </ProjectSectionContent>
-              </ProjectSection>
-            </EarthSection>
-            <EarthSection
-              scrimReverse
-              animations={['0:loop']}
-              camera={[0.37, 1.02, 1.84]}
-              meshes={['Atmosphere', 'EarthFull']}
-            />
-          </Earth>
-        </ThemeProvider>
-        <ProjectSection>
-          <ProjectSectionContent>
-            <ProjectTextRow center centerMobile noMargin>
-              <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
-              <ProjectSectionText>
-                Ultimately the project was successful after Smart Sparrow and the aero
-                platform were{' '}
-                <Link href="https://www.prnewswire.com/news-releases/pearson-acquires-interactive-learning-technology-from-smart-sparrow-300987673.html">
-                  acquired by Pearson in 2020
-                </Link>{' '}
-                to become a foundation for their next generation learning platform.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection> */}
       </ProjectContainer>
       <Footer />
     </Fragment>
