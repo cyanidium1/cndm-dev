@@ -110,7 +110,7 @@ export const Home = () => {
         title="Сайты которые одинаково хорошо смотрятся на любых экранах и устройствах"
         description="Обратившись ко мне вы можете не переживать что потеряете клиента из-за того что сайт не будет работать на каком-то устройстве."
         buttonText="Посмотреть сайт"
-        buttonLink="https://www.graph3d.pro/"
+        buttonLink="/projects/smart-sparrow/"
         model={{
           type: 'phone',
           alt: 'App login screen',
