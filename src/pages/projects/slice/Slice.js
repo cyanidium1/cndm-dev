@@ -7,9 +7,9 @@ import sliceApp from 'assets/slice-app.jpg';
 import sliceBackgroundBarLarge from 'assets/slice-background-bar-large.jpg';
 import sliceBackgroundBarPlaceholder from 'assets/slice-background-bar-placeholder.jpg';
 import sliceBackgroundBar from 'assets/slice-background-bar.jpg';
-import sliceBackgroundLarge from 'assets/slice-background-large.jpg';
-import sliceBackgroundPlaceholder from 'assets/slice-background-placeholder.jpg';
-import sliceBackground from 'assets/slice-background.jpg';
+import sliceBackgroundLarge from 'assets/kitchen-large.png';
+import sliceBackgroundPlaceholder from 'assets/spr-background-placeholder.jpg';
+import sliceBackground from 'assets/kitchen.jpg';
 import sliceIrlPlaceholder from 'assets/slice-irl-placeholder.jpg';
 import sliceIrl from 'assets/slice-irl.jpg';
 import sliceSidebarAnnotationsLarge from 'assets/slice-sidebar-annotations-large.png';
@@ -40,10 +40,9 @@ import { Fragment } from 'react';
 import { media } from 'utils/style';
 import styles from './Slice.module.css';
 
-const title = 'Biomedical image collaboration';
+const title = 'Ukrainian Cuisine Delivery in Albania';
 const description =
-  'This project involved designing a better way for biomedical educators and learners to annotate digital slides together.';
-const roles = ['User Research', 'UX Design', 'Interface Design'];
+  'A website for delivering Ukrainian cuisine in Albania. The client is written in React + TypeScript using a variety of libraries such as Redux, Tailwind CSS, Material-UI, and Axios. Along with the website, there is a bot that forwards data from forms to the administrator\'s personal messages, calculates delivery time, and groups orders.';
 
 export const Slice = () => {
   return (
@@ -60,7 +59,7 @@ export const Slice = () => {
           title={title}
           description={description}
           url="https://www.best.edu.au/s/q2yjjvl7?data=8%404!9%4020303!10%40-15087&version=1"
-          roles={roles}
+          roles={['User Research', 'UX Design', 'Interface Design']}
         />
         <ProjectSection padding="top">
           <ProjectSectionContent>
@@ -75,16 +74,12 @@ export const Slice = () => {
         <ProjectSection>
           <ProjectSectionColumns centered className={styles.columns}>
             <div className={styles.imagesText}>
-              <ProjectSectionHeading>Bringing it together</ProjectSectionHeading>
+              <ProjectSectionHeading>Convenient and Pleasant Interface</ProjectSectionHeading>
               <ProjectSectionText>
-                Teachers needed a better way to create collaborative group activities by
-                annotating slides on Slice. Before starting this project, a layer could
-                only be annotated by a single user, making it difficult for learners to
-                work together.
+                The website has a convenient and pleasant interface, items in the cart are saved from session to session, and the last placed order is also saved with the option to repeat it.
               </ProjectSectionText>
               <ProjectSectionText>
-                Our solution was to allow users to be invited to a layer, where they can
-                see others’ annotations and make their own.
+                When placing an order, the client can conveniently specify their location directly in the restaurant's application, which will be converted by the bot into a link to Google Maps for the administrator.
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
@@ -108,14 +103,9 @@ export const Slice = () => {
         <ProjectSection light>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Improving the experience</ProjectSectionHeading>
+              <ProjectSectionHeading>Custom Admin Panel</ProjectSectionHeading>
               <ProjectSectionText>
-                A problem we heard about often form users was that it was difficult to
-                find images they had previously seen or worked on. To solve this we added
-                a new tab that lists all previously annotated slides. In addition, we
-                added the ability to favorite slides, so if users find an interesting
-                slide they want to annotate later, they can easily save it to their
-                account.
+                The website also includes a custom admin panel that allows editing the menu, prices, product sections, and configuring delivery calculation. Changes made in the admin panel are instantly reflected on the website. Additionally, the admin panel allows adding hidden menu sections, making backups, and performing many other necessary actions for site administration.
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
@@ -148,13 +138,9 @@ export const Slice = () => {
               </div>
             </div>
             <div className={styles.gridText}>
-              <ProjectSectionHeading>Meaningful details</ProjectSectionHeading>
+              <ProjectSectionHeading>Multiple Versions</ProjectSectionHeading>
               <ProjectSectionText>
-                Marking and annotating areas on high resolution biomedical images is the
-                core experience of the app, and it was easy to get lost or lose sense of
-                scale when zooming in on details. Adding measurements for the perimeter
-                and area of an annotation both helped to communicate the overall scale of
-                the image and how large the annotated feature is in comparison.
+                The application has several versions - mobile, tablet, and desktop.
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>
@@ -162,13 +148,9 @@ export const Slice = () => {
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
+              <ProjectSectionHeading>Project Outcomes</ProjectSectionHeading>
               <ProjectSectionText>
-                Real-time collaborative annotation facilitated better collaboration
-                between learners, and was much easier to run group exercises with the new
-                shared layers feature. Learners gave feedback that is was enjoyable to
-                work together and see what others were doing, and liked how interactive
-                and easy to use the application was.
+                The client was very satisfied with the result and may consider expanding the project even further in the future.
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
@@ -183,3 +165,4 @@ export const Slice = () => {
     </Fragment>
   );
 };
+

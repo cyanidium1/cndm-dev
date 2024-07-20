@@ -20,25 +20,11 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I&apos;m Mayank, currently enrolled at{' '}
-      <Link href="https://kiit.ac.in">KIIT University</Link> to pursue an engineering
-      degree in Information Technology. My area of expertise in web development is the
-      MERN stack. As a self-taught developer, I&apos;m constantly searching for ways to
-      improve. I pick things up quickly, and I&apos;m constantly eager to learn something
-      new. I work well in teams and am constantly willing to lend a hand. In addition to
-      this, I am a <b>Content Writer/Marketer</b> as well.
+      Меня зовут Федор, я занимаюсь программированием более 8 лет и конкретно разработкой сайтов около 3. Работаю как фрилансер, разрабатывая сайты и веб-приложения любых типов и размеров. У меня есть своя команда, включающая дизайнеров, копирайтеров и специалистов по интерфейсу. Сам я являюсь программистом, архитектором и менеджером проекта.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I am a member of the{' '}
-      <Link href="https://msckiit.tech">
-        Microsoft Learn Student Ambassadors, KIIT Chapter
-      </Link>{' '}
-      as a{' '}
-      <span style={{ fontWeight: 'bold' }}>Creative Lead and Operations Executive</span>{' '}
-      and <span style={{ fontWeight: 'bold' }}>Senior Executive</span> at the{' '}
-      <Link href="https://ecell.org.in">KIIT Entrepreneurship Cell</Link>. I&apos;ve
-      helped organised several events having a cumulative footfall of more than 3000+
-      people, and have the experience of managing a team of 100+ members as well.
+      Почему стоит обратиться именно ко мне? Я перфекционист и действительно люблю свое дело. До IT у меня было несколько успешных (и не очень) бизнес-кейсов, поэтому я прекрасно понимаю, как должен выглядеть идеальный сайт как со стороны разработчкиа, так и пользователя, чтобы он идеально выполнял свою роль а именно приносил прибыль.
+      Вы можете мне написать с любыми вопросами и я с радостью вас проконсультирую :)
     </Text>
   </Fragment>
 );
@@ -70,7 +56,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 href="/contact"
                 icon="send"
               >
-                Send me a message
+                Связаться
               </Button>
             </div>
             <div className={styles.column}>
