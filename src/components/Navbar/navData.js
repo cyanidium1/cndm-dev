@@ -16,26 +16,26 @@ export const navLinks = [
     pathname: '/contact',
   },
   {
-    label: 'Resume',
+    label: 'Uncover® Project (UE5)',
     pathname:
-      'https://drive.google.com/file/d/1w0fSvU6YW2pG-HmDci4CAR_KE_K9zE0L/view?usp=sharing',
+      '/uncover',
   },
 ];
 
 export const socialLinks = [
   {
     label: 'Github',
-    url: 'https://github.com/mayankjain25',
+    url: 'https://github.com/cyanidium1',
     icon: 'github',
   },
   {
     label: 'Linkedin',
-    url: 'https://www.linkedin.com/in/mayank-jain-688409208/',
+    url: 'https://t.me/FreelancerOnMondays',
     icon: 'linkedin',
   },
   {
     label: 'Leetcode',
-    url: 'https://leetcode.com/jainmayank2509/',
+    url: 'https://instagram.com/cyanidium',
     icon: 'leetcode',
   },
 ];

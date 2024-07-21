@@ -16,17 +16,27 @@ import cicd from 'assets/slice-app.jpg';
 import stockDash from 'assets/gamestack-login.jpg';
 import stockDash2 from 'assets/gamestack-list.jpg';
 
+import translations from './translations.json';
+
 const disciplines = ['Web Dev', 'Web Design', 'App Dev.'];
+
+const getDefaultLanguage = () => {
+  const language = navigator.language.split('-')[0];
+  return translations[language] ? language : 'en';
+};
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
+  const [language, setLanguage] = useState(getDefaultLanguage());
   const intro = useRef(null);
   const projectOne = useRef(null);
   const projectTwo = useRef(null);
   const projectThree = useRef(null);
   const projectFour = useRef(null);
   const details = useRef(null);
+
+  const t = translations[language];
 
   useEffect(() => {
     const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
@@ -71,9 +81,8 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <Meta
-        title="Designer + Developer"
-        description="Design portfolio of CNDM Dev — a product designer working on web & mobile
-          apps with a focus on motion, experience design, and accessibility."
+        title={t.title}
+        description={t.description}
       />
       <Intro
         id="intro"
@@ -86,9 +95,9 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Создаю сайты которые приносят деньги"
-        description="Помогу вывести любой бизнес на новый уровень с использованием самых современных технологий и user-friendly дизайна."
-        buttonText="Посмотреть мой проект для крупного агентсва недвижимости"
+        title={t.projectOneTitle}
+        description={t.projectOneDescription}
+        buttonText={t.projectOneButtonText}
         buttonLink="https://www.bstrust369.com/"
         model={{
           type: 'laptop',
@@ -107,9 +116,9 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Сайты которые одинаково хорошо смотрятся на любых экранах и устройствах"
-        description="Обратившись ко мне вы можете не переживать что потеряете клиента из-за того что сайт не будет работать на каком-то устройстве."
-        buttonText="Посмотреть сайт"
+        title={t.projectTwoTitle}
+        description={t.projectTwoDescription}
+        buttonText={t.projectTwoButtonText}
         buttonLink="/projects/smart-sparrow/"
         model={{
           type: 'phone',
@@ -131,9 +140,9 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="От простого лендинга до сложных интернет магазинов"
-        description="Берусь за любую сложность проекта. Хотите одностраничник-визитку с красивым дизайном, анимацией и мультиязычностью - пожалуйста! Хотите маркетплейс с базой данных товаров, админ-панелью и автоматическими продажами? Не вопрос :)"
-        buttonText="Проект ресторана домашней кухни"
+        title={t.projectThreeTitle}
+        description={t.projectThreeDescription}
+        buttonText={t.projectThreeButtonText}
         buttonLink="/projects/slice"
         model={{
           type: 'laptop',
@@ -146,31 +155,6 @@ export const Home = () => {
           ],
         }}
       />
-      {/* <ProjectSummary
-        id="project-4"
-        alternate
-        sectionRef={projectFour}
-        visible={visibleSections.includes(projectFour.current)}
-        index={4}
-        title="Stocks Dashboard"
-        description="A dashboard to display some of the top performing stocks in the Indian market"
-        buttonText="View website"
-        buttonLink="http://stock-dashboard.kiitians.com/"
-        model={{
-          type: 'phone',
-          alt: 'App login screen',
-          textures: [
-            {
-              srcSet: [stockDash],
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: [stockDash2],
-              placeholder: gamestackTexture2Placeholder,
-            },
-          ],
-        }}
-      /> */}
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}

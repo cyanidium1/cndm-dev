@@ -1,0 +1,54 @@
+{
+    "en": {
+      "title": "Designer + Developer",
+      "description": "Design portfolio of CNDM Dev — a product designer working on web & mobile apps with a focus on motion, experience design, and accessibility.",
+      "projectOneTitle": "Creating websites that generate revenue",
+      "projectOneDescription": "I will help elevate any business to a new level using the latest technologies and user-friendly design.",
+      "projectOneButtonText": "Check out my project for a large real estate agency",
+      "projectTwoTitle": "Websites that look great on any screen and device",
+      "projectTwoDescription": "With my services, you won't lose clients due to site incompatibility on different devices.",
+      "projectTwoButtonText": "View the website",
+      "projectThreeTitle": "From simple landing pages to complex e-commerce sites",
+      "projectThreeDescription": "I handle any project complexity. Want a single-page business card with beautiful design, animation, and multilingual support? Sure! Want a marketplace with a product database, admin panel, and automated sales? No problem :)",
+      "projectThreeButtonText": "Home cuisine restaurant project",
+      "profileTitle": "Hi there",
+      "profileDescription1": "My name is Fedir, I have been programming for over 8 years and specifically developing websites for about 3 years. I work as a freelancer, developing websites and web applications of all types and sizes. I have my own team, which includes designers, copywriters, and interface specialists. I am a programmer, architect, and project manager.",
+      "profileDescription2": "Why should you contact me? I am a perfectionist and I really love what I do. Before IT, I had several successful (and not so successful) business cases, so I understand perfectly how an ideal website should look from both a developer's and a user's perspective to perfectly fulfill its role of generating profit. You can write to me with any questions and I will be happy to advise you :)",
+      "contactButtonText": "Contact"
+    },
+    "ru": {
+      "title": "Дизайнер + Разработчик",
+      "description": "Портфолио дизайнера CNDM Dev — продуктового дизайнера, работающего над веб и мобильными приложениями с акцентом на анимацию, опыт пользователя и доступность.",
+      "projectOneTitle": "Создание сайтов, приносящих доход",
+      "projectOneDescription": "Я помогу вывести любой бизнес на новый уровень, используя новейшие технологии и удобный дизайн.",
+      "projectOneButtonText": "Посмотрите мой проект для крупного агентства недвижимости",
+      "projectTwoTitle": "Сайты, которые выглядят великолепно на любом экране и устройстве",
+      "projectTwoDescription": "С моими услугами вы не потеряете клиентов из-за несовместимости сайта на разных устройствах.",
+      "projectTwoButtonText": "Посмотреть сайт",
+      "projectThreeTitle": "От простых лендингов до сложных интернет-магазинов",
+      "projectThreeDescription": "Я справлюсь с любым уровнем сложности проекта. Хотите одностраничный сайт-визитку с красивым дизайном, анимацией и поддержкой нескольких языков? Легко! Хотите маркетплейс с базой данных товаров, админ-панелью и автоматическими продажами? Без проблем :)",
+      "projectThreeButtonText": "Проект ресторана домашней кухни",
+      "profileTitle": "Привет",
+      "profileDescription1": "Меня зовут Федор, я занимаюсь программированием более 8 лет и конкретно разработкой сайтов около 3. Работаю как фрилансер, разрабатывая сайты и веб-приложения любых типов и размеров. У меня есть своя команда, включающая дизайнеров, копирайтеров и специалистов по интерфейсу. Сам я являюсь программистом, архитектором и менеджером проекта.",
+      "profileDescription2": "Почему стоит обратиться именно ко мне? Я перфекционист и действительно люблю свое дело. До IT у меня было несколько успешных (и не очень) бизнес-кейсов, поэтому я прекрасно понимаю, как должен выглядеть идеальный сайт как со стороны разработчика, так и пользователя, чтобы он идеально выполнял свою роль а именно приносил прибыль. Вы можете мне написать с любыми вопросами и я с радостью вас проконсультирую :)",
+      "contactButtonText": "Связаться"
+    },
+    "uk": {
+      "title": "Дизайнер + Розробник",
+      "description": "Портфоліо дизайнера CNDM Dev — продуктового дизайнера, що працює над веб та мобільними додатками з акцентом на анімацію, досвід користувача та доступність.",
+      "projectOneTitle": "Створення сайтів, що приносять дохід",
+      "projectOneDescription": "Я допоможу вивести будь-який бізнес на новий рівень, використовуючи новітні технології та зручний дизайн.",
+      "projectOneButtonText": "Подивіться мій проект для великого агентства нерухомості",
+      "projectTwoTitle": "Сайти, які виглядають чудово на будь-якому екрані та пристрої",
+      "projectTwoDescription": "З моїми послугами ви не втратите клієнтів через несумісність сайту на різних пристроях.",
+      "projectTwoButtonText": "Переглянути сайт",
+      "projectThreeTitle": "Від простих лендінгів до складних інтернет-магазинів",
+      "projectThreeDescription": "Я справлюся з будь-яким рівнем складності проекту. Хочете односторінковий сайт-візитку з красивим дизайном, анімацією та підтримкою декількох мов? Легко! Хочете маркетплейс з базою даних товарів, адмін-панеллю та автоматичними продажами? Без проблем :)",
+      "projectThreeButtonText": "Проект ресторану домашньої кухні",
+      "profileTitle": "Привіт",
+      "profileDescription1": "Мене звати Федір, я займаюся програмуванням понад 8 років і конкретно розробкою сайтів близько 3. Працюю як фрилансер, розробляючи сайти та веб-застосунки будь-яких типів та розмірів. У мене є своя команда, яка включає дизайнерів, копірайтерів і фахівців з інтерфейсу. Сам я є програмістом, архітектором і менеджером проекту.",
+      "profileDescription2": "Чому варто звернутися саме до мене? Я перфекціоніст і дійсно люблю свою справу. До IT у мене було кілька успішних (і не дуже) бізнес-кейсів, тому я прекрасно розумію, як повинен виглядати ідеальний сайт як з боку розробника, так і користувача, щоб він ідеально виконував свою роль, а саме приносив прибуток. Ви можете написати мені з будь-яких питань, і я з радістю вас проконсультую :)",
+      "contactButtonText": "Зв'язатися"
+    }
+  }
+  

@@ -1,3 +1,36 @@
+/* components/Navbar.module.css */
+.languageSelector, .mobileLanguageSelector {
+  margin-left: 20px;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  font-size: var(--headerNavFontSize);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  transition: border-color var(--durationM) ease, background-color var(--durationM) ease, color var(--durationM) ease;
+}
+
+.languageSelector:hover, .mobileLanguageSelector:hover,
+.languageSelector:focus, .mobileLanguageSelector:focus {
+  border-color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+@media (--mediaMobile) {
+  .languageSelector, .mobileLanguageSelector {
+    margin-left: 10px;
+    padding: 8px;
+  }
+}
+
+@media (--mediaMobileLS) {
+  .mobileLanguageSelector {
+    margin-top: 10px;
+  }
+}
+
+
 .navbar {
   --headerNavFontSize: calc((16 / 16) * 1rem);
 

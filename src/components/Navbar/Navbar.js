@@ -1,3 +1,4 @@
+// components/Navbar.js
 import { Icon } from 'components/Icon';
 import { Monogram } from 'components/Monogram';
 import { useTheme } from 'components/ThemeProvider';
@@ -12,6 +13,7 @@ import { NavToggle } from './NavToggle';
 import styles from './Navbar.module.css';
 import { ThemeToggle } from './ThemeToggle';
 import { navLinks, socialLinks } from './navData';
+import useStore from '../../utils/useStore';
 
 export const Navbar = () => {
   const [current, setCurrent] = useState();
@@ -23,6 +25,7 @@ export const Navbar = () => {
   const headerRef = useRef();
   const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
   const scrollToHash = useScrollToHash();
+  const { language, setLanguage } = useStore();
 
   useEffect(() => {
     // Prevent ssr mismatch by storing this in state
@@ -139,6 +142,10 @@ export const Navbar = () => {
     if (menuOpen) dispatch({ type: 'toggleMenu' });
   };
 
+  const handleLanguageChange = (event) => {
+    setLanguage(event.target.value);
+  };
+
   return (
     <header className={styles.navbar} ref={headerRef}>
       <RouterLink href={route === '/' ? '/#intro' : '/'} scroll={false}>
@@ -168,6 +175,12 @@ export const Navbar = () => {
           ))}
         </div>
         <NavbarIcons desktop />
+        <select value={language} onChange={handleLanguageChange} className={styles.languageSelector}>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          {/* Добавьте другие языки по необходимости */}
+        </select>
       </nav>
       <Transition unmount in={menuOpen} timeout={msToNum(tokens.base.durationL)}>
         {visible => (
@@ -191,6 +204,12 @@ export const Navbar = () => {
             ))}
             <NavbarIcons />
             <ThemeToggle isMobile />
+            <select value={language} onChange={handleLanguageChange} className={styles.mobileLanguageSelector}>
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+              {/* Добавьте другие языки по необходимости */}
+            </select>
           </nav>
         )}
       </Transition>
