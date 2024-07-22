@@ -21,9 +21,13 @@ import translations from './translations.json';
 const disciplines = ['Web Dev', 'Web Design', 'App Dev.'];
 
 const getDefaultLanguage = () => {
-  const language = navigator.language.split('-')[0];
-  return translations[language] ? language : 'en';
+  if (typeof navigator !== 'undefined') {
+    const language = navigator.language.split('-')[0];
+    return translations[language] ? language : 'en';
+  }
+  return 'en';
 };
+
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);

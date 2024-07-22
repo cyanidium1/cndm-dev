@@ -1,8 +1,5 @@
-import create from 'zustand';
-
-const useStore = create((set) => ({
-  language: 'en', 
-  setLanguage: (lang) => set({ language: lang }),
+import { create } from 'zustand';
+const useStore = create(set => ({
+  language: 'en',
+  setLanguage: (language) => set({ language }),
 }));
-
-export default useStore;
